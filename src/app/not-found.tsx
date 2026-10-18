@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NF(){return <div className="text-center py-20"><h1 className="text-3xl font-bold">404 – Page not found</h1><Link href="/" className="underline text-brand">Back to MovieKhoj</Link></div>}

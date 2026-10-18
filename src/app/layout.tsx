@@ -1,0 +1,7 @@
+import "./globals.css";import Link from "next/link";import type {Metadata} from "next";
+export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000"),title:{default:"MovieKhoj – Movie Discovery",template:"%s | MovieKhoj"},description:"Discover movies and find official viewing links. By SAUR 404."};
+export default function L({children}:{children:React.ReactNode}){return(<html lang="en"><body className="min-h-screen font-sans">
+<header className="flex items-center justify-between p-4 border-b border-white/10"><Link href="/" className="text-xl font-bold text-brand">Movie<span className="text-accent">Khoj</span></Link>
+<form action="/" className="flex gap-2"><input name="q" placeholder="Search movies" aria-label="Search" className="rounded bg-card px-3 py-1"/><button className="rounded bg-brand px-3">Go</button></form></header>
+<main className="mx-auto max-w-6xl p-4">{children}</main>
+<footer className="p-6 text-sm text-gray-400 border-t border-white/10">MovieKhoj is a movie discovery and link directory. We do not host or own any films. <br/><a href="/legal/about">About</a> · <a href="/legal/contact">Contact</a> · <a href="/legal/privacy">Privacy</a> · <a href="/legal/terms">Terms</a> · <a href="/legal/copyright">Copyright</a> · <a href="/legal/external-links">External links</a> · <a href="/legal/affiliate">Affiliate</a><br/>Metadata from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></body></html>)}
